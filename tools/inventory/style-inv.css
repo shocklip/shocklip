@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: bisque;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: bisque;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        'nav nav nav'
+        'title title title'
+        '. main .'
+    ;
+
+    gap: 0px;
+    background-color: rgb(68, 69, 70);
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    justify-content: space-around;
+
+
+    position: sticky;
+    top: 0;
+
+    height: 100%;
+    max-height: 100%;
+
+    width: 100%;
+    max-width: 100%;
+
+    background-color: rgb(37, 37, 37);
+    color: bisque;
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+
+    background-color: orangered;
+}
+
+.avatar {
+    border-radius: 50% 50% 50% 50%;
+    transition: border-radius 250ms ease-in-out;
+    max-width: 200px;
+}
+
+.avatar:hover {
+    border-radius: 20% 20% 20% 20%;
+}
+
+.main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        '. item-class .'
+        '. filter .'
+        '. items .'
+    ;
+}
+
+.main>div {
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.item-class {
+    grid-area: item-class;
+}
+
+.filter {
+    grid-area: filter;
+}
+
+.items {
+    grid-area: items;
+}
+
+
+
+/*------------------------*/
+
+.dropbtn {
+    background-color: orangered;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+#myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
+
+.dropdown {
+    position: sticky;
+    top: 0;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}

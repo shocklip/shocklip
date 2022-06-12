@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style-inv.css">
+</head>
+
+<body>
+    <div class="nav">
+        <a href="http://localhost/div2/tools/inventory/">Home</a>
+        <img src="http://localhost/div2/pictures/avatar1.jpg" alt="Avatar picture" class="avatar">
+    </div>
+    <div class="title">
+        <h1><a href="index.html">INVENTORY</a> / <a href="stash.html">STASH</a></h1>
+    </div>
+    <div class="main">
+        <div class="item-class">
+            <h1>MASK</h1>
+        </div>
+        <div class="filter">`
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Brand</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                    <a href="#about">5.11 Tactical</a>
+                    <a href="#base">Airaldi Holdings</a>
+                    <a href="#blog">Alps Summit Armament</a>
+                    <a href="#contact">Badger Tuff</a>
+                    <a href="#custom">China Light Industries Corporation</a>
+                    <a href="#support">Douglas & Harding</a>
+                    <a href="#tools">Fenris Group AB</a>
+                    <a href="#tools">Gila Guard</a>
+                    <a href="#tools">Murakami Industries</a>
+                    <a href="#tools">Overlord Armaments</a>
+                    <a href="#tools">Petrov Defense Group</a>
+                    <a href="#tools">Providence Defense</a>
+                    <a href="#tools">Richter & Kaiser GmbH</a>
+                    <a href="#tools">Sokolov Concern</a>
+                    <a href="#tools">Wyvern Wear</a>
+                    <a href="#tools">Yaahl Gear</a>
+                </div>
+            </div>
+
+            <script>
+                /* When the user clicks on the button,
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                function filterFunction() {
+                    var input, filter, ul, li, a, i;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    div = document.getElementById("myDropdown");
+                    a = div.getElementsByTagName("a");
+                    for (i = 0; i < a.length; i++) {
+                        txtValue = a[i].textContent || a[i].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            a[i].style.display = "";
+                        } else {
+                            a[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            brand - core attribute - attribute - modslot - chest talent - backpack talent
+        </div>
+        <div class="items">
+            <ol>
+                <il>item 1</il><br>
+                <il>item 2</il><br>
+                <il>item 3</il><br>
+                <il>item 4</il><br>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

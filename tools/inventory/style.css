@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: bisque;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: bisque;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        'nav nav nav'
+        'title title title'
+        '. main .'
+    ;
+
+    gap: 0px;
+    background-color: rgb(68, 69, 70);
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    justify-content: space-around;
+
+    position: sticky;
+    top: 0;
+
+    height: 100%;
+    max-height: 100%;
+
+    width: 100%;
+    max-width: 100%;
+
+    background-color: rgb(37, 37, 37);
+    color: bisque;
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+
+    background-color: orangered;
+}
+
+.avatar {
+    border-radius: 50% 50% 50% 50%;
+    transition: border-radius 250ms ease-in-out;
+    max-width: 200px;
+}
+
+.avatar:hover {
+    border-radius: 20% 20% 20% 20%;
+}
+
+.main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+        '. mask backpack all-items .'
+        '. chest gloves mods .'
+        '. holster kneepads . .'
+    ;
+
+    padding: 32px;
+    margin-top: 32px;
+    gap: 16px;
+
+    /*border-width: 1px;
+    border-style: solid;
+    border-color: orangered;*/
+}
+
+.main>div {
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    align-items: center;
+
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.main>div>a>img {
+    max-width: 90%;
+    max-height: 90%;
+
+}
+
+.main>div>a>img:active {
+    max-width: 120%;
+    max-height: 120%;
+
+    background-color: rgb(167, 89, 61);
+}
+
+/*.main>div:hover {
+    background-color: rgb(167, 89, 61);
+}*/
+
+.mask {
+    grid-area: mask;
+}
+
+.backpack {
+    grid-area: backpack;
+}
+
+.all-items {
+    grid-area: all-items;
+}
+
+.chest {
+    grid-area: chest;
+}
+
+.gloves {
+    grid-area: gloves;
+}
+
+.mods {
+    grid-area: mods;
+}
+
+.holster {
+    grid-area: holster;
+}
+
+.kneepads {
+    grid-area: kneepads;
+}
